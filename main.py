@@ -7,8 +7,8 @@ print("date and time:",date_time)
 
 import datetime
 ano= 2022       #formato AAAA
-mes=  3        #usar numeros
-dia= 25
+mes=  2        #usar numeros
+dia= 12
 
 datapadrao = datetime.date(ano, mes, dia)
 hoje = datetime.date.today()
@@ -21,7 +21,16 @@ elif datapadrao <= hoje:
 
 print (delta.days)
 if delta.days>=28:
-    print('atualizar')    #vai precisar de else if com integração de banco de dados
-
+    print('Atualize seus dados.')    #vai precisar de else if com integração de banco de dados
+    datapadrao = 0
+    print(datapadrao)
 else:
-    quit()
+    quit() 
+# Define a funcao
+def calc_water_pkg(peso, need_agua):
+    print("Voce precisa ingerir aproximadamente ",need_agua," Litros de agua. Peso: ",peso)
+
+peso = 59   # Peso do usuario em KG
+need_agua = 35 * peso # Calculo logico para quantidade de agua por Kilograma
+
+calc_water_pkg(peso,need_agua) # Chama a funcao exportando os valores das variaveis
