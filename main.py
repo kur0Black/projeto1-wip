@@ -27,10 +27,10 @@ if delta.days>=28:
 else:
     quit() 
 # Define a funcao
-def calc_water_pkg(peso, need_agua):
-    print("Voce precisa ingerir aproximadamente ",need_agua," Litros de agua. Peso: ",peso)
+def calc_water_pkg(kg):
+    water = 35 * kg # Calculo logico para quantidade de agua(ML) por Kilograma
+    print("Voce precisa ingerir aproximadamente ",water," Litros de agua. Peso: ",kg)
 
 peso = 59   # Peso do usuario em KG
-need_agua = 35 * peso # Calculo logico para quantidade de agua por Kilograma
 
-calc_water_pkg(peso,need_agua) # Chama a funcao exportando os valores das variaveis
+calc_water_pkg(peso) # Chama a funcao exportando os valores das variaveis
